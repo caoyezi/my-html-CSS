@@ -1,0 +1,1631 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>45个纯 CSS 实现的精美边框效果</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <style>
+        body {
+            font-size: 11px;
+            font-family: 'Open Sans', sans-serif;
+            color: #4A4A4A;
+            text-align: center;
+        }
+
+        .box1 {
+            width: 300px;
+            margin: 20px;
+            padding: 10px;
+            min-height: 200px;
+            position: relative;
+            display: inline-block;
+            background: -webkit-gradient(linear, 0% 20%, 0% 1000%, from(#fff), to(#fff), color-stop(.1, #f3f3f3));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.1) inset;
+            -webkit-border-bottom-right-radius: 6px 50px;
+        }
+
+        .box1:before {
+            content: '';
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+            z-index: -1;
+            -webkit-transform: translate(-35px, -40px) skew(0deg, 30deg) rotate(-25deg);
+        }
+
+        .box1:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: inline-block;
+            z-index: -1;
+            -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+        }
+
+        .box1 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box2 {
+            margin: 20px auto;
+            width: 300px;
+            min-height: 150px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1, #f3f3f3));
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            -webkit-border-bottom-right-radius: 60px 60px;
+            -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .box2:before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+        }
+
+        .box2:after {
+            content: '';
+            z-index: -1;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+        }
+
+        .box2 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box3 {
+            margin: 20px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-border-radius: 60px 5px;
+            -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        .box3:before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            display: inline-block;
+            z-index: -1;
+            -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+        }
+
+        .box3:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+        }
+
+        .box3 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box4 {
+            margin: 20px auto;
+            min-height: 100px;
+            width: 300px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#fff), to(#fff), color-stop(.2, #f2f2f2));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .box4:before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+        }
+
+        .box4:after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(12px, 25px) skew(20deg);
+        }
+
+        .shr_box4 {
+            width: 100px;
+            height: 100px;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-20px, -15px) skew(20deg);
+        }
+
+        .shl_box4 {
+            content: '';
+            width: 100px;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            -webkit-box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(20px, -15px) skew(-20deg);
+        }
+
+        .box4 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box5 {
+            margin: 20px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1, #f3f3f3));
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            -webkit-border-bottom-right-radius: 60px 60px;
+            -webkit-border-bottom-left-radius: 60px 60px;
+            -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .box5:before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to(#eee), color-stop(.1, #fff));
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+        }
+
+        .box5:after {
+            content: '';
+            z-index: -10;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+        }
+
+        .fold_box5 {
+            z-index: -10;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            -webkit-box-shadow: -20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(40px, -20px) skew(-20deg);
+        }
+
+        .fold2_box5 {
+            content: '';
+            width: 25px;
+            height: 20px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: -webkit-gradient(linear, 0% 20%, 50% 80%, from(#fff), to(#eee), color-stop(.1, #fff));
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(103deg) skew(-3deg, -40deg) translate(-13px, -15px);
+        }
+
+        .box5 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box6 {
+            margin: 20px auto;
+            width: 300px;
+            min-height: 150px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            -webkit-border-top-left-radius: 60px 5px;
+            -webkit-border-top-right-radius: 60px 5px;
+            -webkit-border-bottom-right-radius: 60px 60px;
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .box6:before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+        }
+
+        .box6:after {
+            content: '';
+            z-index: -10;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+        }
+
+        .box6_corner_lf {
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -6;
+            display: inline-block;
+            -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+        }
+
+        .box6_corner_rt {
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            display: inline-block;
+            z-index: -6;
+            -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+        }
+
+        .box6 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box7 {
+            margin: 20px auto;
+            width: 320px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box7:before {
+            content: '';
+            position: absolute;
+            width: 130px;
+            height: 30px;
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            -webkit-transform: translate(-50px, 10px) skew(10deg, 10deg) rotate(-50deg)
+        }
+
+        .box7:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 130px;
+            height: 30px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            -webkit-transform: translate(50px, -20px) skew(10deg, 10deg) rotate(-50deg)
+        }
+
+        .box7 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box8 {
+            margin: 40px auto;
+            width: 300px;
+            min-height: 250px;
+            padding: 10px;
+            position: relative;
+            border: 2px solid #ccc;
+            background: rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .box8:before {
+            content: '';
+            top: 0;
+            width: 110%;
+            left: 0;
+            height: 125%;
+            z-index: -1;
+            position: absolute;
+            border: 1px solid #ccc;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1, #f3f3f3));
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+            -webkit-transform: translate(-5%, -5%);
+        }
+
+        .box8:after {
+            content: '';
+            top: 0;
+            width: 100%;
+            left: 0;
+            height: 115%;
+            z-index: -2;
+            background: none;
+            position: absolute;
+            border-radius: 20px;
+            -webkit-box-shadow: 15px 0px 30px rgba(0, 0, 0, 0.2);
+            -webkit-transform: translate(0, 0);
+        }
+
+        .box8 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box9 {
+            margin: 40px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            background: white;
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .box9:before {
+            content: '';
+            width: 110%;
+            left: 0;
+            height: 111%;
+            z-index: -1;
+            position: absolute;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.0);
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            -webkit-transform: translate(-5%, -5%);
+        }
+
+        .box9:after {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 30%;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box9 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box10 {
+            margin: 20px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+            -webkit-border-bottom-right-radius: 60px 5px;
+        }
+
+        .box10:before {
+            content: '';
+            width: 98%;
+            z-index: -1;
+            height: 100%;
+            padding: 0 0 1px 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f9f9f9), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+            -webkit-border-bottom-right-radius: 60px 5px;
+            -webkit-transform: skew(2deg, 2deg) translate(3px, 8px)
+        }
+
+        .box10:after {
+            content: '';
+            width: 98%;
+            z-index: -1;
+            height: 98%;
+            padding: 0 0 1px 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#f3f3f3), to(#f6f6f6), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            -webkit-transform: skew(2deg, 2deg) translate(-1px, 2px)
+        }
+
+        .box10 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box11 {
+            margin: 40px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1, #f3f3f3));
+            border-top: 1px solid white;
+            border-right: 1px solid #ccc;
+            -webkit-border-bottom-right-radius: 60px 60px;
+            -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .box11:before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to(#eee), color-stop(.1, #fff));
+            -webkit-border-bottom-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+            transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+        }
+
+        .box11:after {
+            content: '';
+            z-index: -1;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+        }
+
+        .box11_ribbon {
+            position: absolute;
+            top: -25px;
+            left: 30%;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box11 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box12 {
+            margin: 40px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1, #f3f3f3));
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            -webkit-border-bottom-right-radius: 60px 60px;
+            -webkit-border-bottom-left-radius: 60px 60px;
+            -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .box12:before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to(#eee), color-stop(.1, #fff));
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+        }
+
+        .box12:after {
+            content: '';
+            z-index: -10;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+        }
+
+        .fold_box12 {
+            z-index: -10;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            -webkit-box-shadow: -20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(40px, -20px) skew(-20deg);
+        }
+
+        .fold2_box12 {
+            width: 25px;
+            height: 20px;
+            z-index: 20;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: -webkit-gradient(linear, 0% 20%, 50% 80%, from(#fff), to(#eee), color-stop(.1, #fff));
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(103deg) skew(-3deg, -40deg) translate(-13px, -15px);
+        }
+
+        .box12_ribbon {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 30%;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box12 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box13 {
+            margin: 20px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            -webkit-border-top-left-radius: 60px 5px;
+            -webkit-border-top-right-radius: 60px 5px;
+            -webkit-border-bottom-right-radius: 60px 60px;
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .box13:before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-border-bottom-right-radius: 30px;
+            -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+            -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+        }
+
+        .box13:after {
+            content: '';
+            z-index: -10;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+        }
+
+        .box13_corner_lf {
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -6;
+            display: inline-block;
+            -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+        }
+
+        .box13_corner_rt {
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            display: inline-block;
+            z-index: -6;
+            -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+        }
+
+        .box13_ribbon:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(90deg) skew(0, 0) translate(100px, 65px);
+        }
+
+        .box13_ribbon:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(90deg) skew(0, 0) translate(100px, -65px);
+        }
+
+        .box13 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box14 {
+            margin: 40px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-border-radius: 60px 5px;
+            -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        .box14:before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            display: inline-block;
+            z-index: -1;
+            -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+        }
+
+        .box14:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+        }
+
+        .box14_ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(6deg) skew(0, 0) translate(-60%, -5px);
+        }
+
+        .box14 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box15 {
+            margin: 40px auto;
+            width: 320px;
+            min-height: 310px;
+            padding: 10px;
+            position: relative;
+            background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+            -webkit-border-bottom-right-radius: 60px 5px;
+        }
+
+        .box15:before {
+            content: '';
+            width: 98%;
+            z-index: -1;
+            height: 100%;
+            padding: 0 0 1px 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f9f9f9), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+            -webkit-border-bottom-right-radius: 60px 5px;
+            -webkit-transform: skew(2deg, 2deg) translate(3px, 8px)
+        }
+
+        .box15:after {
+            content: '';
+            width: 98%;
+            z-index: -1;
+            height: 98%;
+            padding: 0 0 1px 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#f3f3f3), to(#f6f6f6), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            -webkit-transform: skew(2deg, 2deg) translate(-1px, 2px)
+        }
+
+        .box15_ribbon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 130px;
+            height: 40px;
+            background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+            -webkit-transform: rotate(-30deg) skew(0, 0) translate(-30px, -20px);
+        }
+
+        .box15 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box16 {
+            background: #fff;
+            margin: 20px auto;
+            display: block;
+            width: 300px;
+            height: 310px;
+            padding: 20px;
+            border-radius: 2px 2px 2px 2px;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        .box16 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box17 {
+            background: #fff;
+            margin: 20px auto;
+            display: block;
+            width: 300px;
+            height: 310px;
+            padding: 20px;
+            border-radius: 2px 2px 2px 2px;
+            -webkit-box-shadow: 0 10px 6px -6px #777;
+            -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+        }
+
+        .box17 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box18 {
+            background: #eee;
+            margin: 20px auto;
+            width: 300px;
+            height: 310px;
+            display: block;
+            padding: 12px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 1px 1px 0 #c7c7c7;
+            -moz-box-shadow: inset 0 1px 1px 0 #c7c7c7;
+            box-shadow: inset 0 1px 1px 0 #c7c7c7;
+        }
+
+        .box18 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+
+        .box19 {
+            height: 310px;
+            width: 300px;
+            margin: 20px auto;
+            padding: 12px;
+            -webkit-box-shadow: 0 0 5px #000;
+            -moz-box-shadow: 0 0 5px #000;
+            box-shadow: 0 0 5px #000;
+            background: -webkit-radial-gradient(center, circle, #f0f0f0, #74a9ad);
+            background: -moz-radial-gradient(center, circle, #f0f0f0, #74a9ad);
+            background: -ms-radial-gradient(center, circle, #f0f0f0, #74a9ad);
+            background: -o-radial-gradient(center, circle, #f0f0f0, #74a9ad);
+            background: radial-gradient(center, circle, #f0f0f0, #74a9ad);
+        }
+
+        .box19 img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4A4A4A !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6B6B6B !important;
+        }
+    </style>
+</head>
+<body>
+<h5>参考代码出处:http://www.cnblogs.com/lhb25/archive/2012/08/29/css-border-and-box-effect-a.html</h5>
+<div class="box1">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box2">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box3">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box4">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="shr_box4"></div>
+    <div class="shl_box4"></div>
+</div>
+<div class="box5">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="fold_box5"></div>
+    <div class="fold2_box5"></div>
+</div>
+<div class="box6">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="box6_corner_lf"></div>
+    <div class="box6_corner_rt"></div>
+</div>
+<div class="box7">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box8">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box9">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box10">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box11">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="box11_ribbon"></div>
+</div>
+<div class="box12">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="fold_box12"></div>
+    <div class="fold2_box12"></div>
+    <div class="box12_ribbon"></div>
+</div>
+<div class="box13">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="box13_corner_lf"></div>
+    <div class="box13_corner_rt"></div>
+    <div class="box13_ribbon"></div>
+</div>
+<div class="box14">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="box14_ribbon"></div>
+</div>
+<div class="box15">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+    <div class="box15_ribbon"></div>
+</div>
+<div class="box16">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box17">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box18">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+<div class="box19">
+    <h1>Sample Box</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus consectetur dolor a porttitor. Curabitur id
+        sem sed ante fringilla pulvinar et id lectus. Nullam justo ipsum, hendrerit ut commodo nec, pellentesque nec
+        erat. Pellentesque pharetra.
+    </p>
+    <br/>
+    <a href="http://www.designshock.com/"> DesignShock.com </a>
+</div>
+</body>
+</html>
