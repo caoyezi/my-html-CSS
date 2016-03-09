@@ -1,0 +1,25 @@
+/*0.5px细线 上*/
+.g-topLine{position: relative;min-height: 10px;}
+.g-topLine::before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 1px;background: #c8c8ca;-webkit-transform:scaleY(0.5);-moz-transform:scaleY(0.5);transform:scaleY(0.5);}
+/*0.5px细线 下*/
+.g-bottomLine{position: relative;min-height: 10px;}
+.g-bottomLine::after{content: "";display: block;position: absolute;bottom: 0;/*z-index:999;*/left: 0;width: 100%;height: 1px;background: #c8c8ca;-webkit-transform:scaleY(0.5);-moz-transform:scaleY(0.5);transform:scaleY(0.5);}
+/*删除按钮*/
+.g-delete{font-size: 23px;margin-right: 10px;display: inline-block;position: relative;width: 1em;height: 1em;border-radius: 50%;background-color: #ff0000;vertical-align: text-bottom;}
+.g-delete::before{content: "";position: absolute;display: block;width: .5em;height: 2px;background-color: #fff;margin: auto;top: 0;bottom: 0;left: 0;right: 0;}
+/*添加按钮*/
+.g-add{font-size: 23px;margin-right: 10px;display: inline-block;position: relative;width: 1em;height: 1em;border-radius: 50%;background-color: #4cd964;vertical-align: text-bottom;}
+.g-add::before{content: "";position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0;width: .5em;height: 2px;background-color: #fff;}
+.g-add::after{content: "";position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0;width: .5em;height: 2px;background-color: #fff;-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);transform: rotate(90deg);}
+/*check按钮 与input checkbox配合*/
+.g-check{font-size: 23px;margin-right: 10px;display: inline-block;position: relative;width: 1em;height: 1em;border: 1px solid #858e99;border-radius: 50%;vertical-align: text-bottom;}
+.g-check:checked{background-color: #38adff;border: 1px solid #38adff;}
+.g-check:checked::before{content:"";display: block;width: .5em;height: .3em;border-left: .1em solid #fff;border-bottom: .1em solid #fff;position: absolute;top: -.1em;bottom: 0;left: 0;right: 0;margin: auto;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);transform: rotate(-45deg);}
+/*ios switch按钮 与input checkbox配合*/
+.g-switch-IOS{font-size: 25px;margin-right: 15px;display: inline-block;position: relative;width: 1.7em;height: 1em;border-radius: .5em;background-color: #e6e6e6;vertical-align: text-bottom;transition:.4s;-moz-transition:.4s;-webkit-transition:.4s;-o-transition:.4s;}
+.g-switch-IOS:checked{background-color: #4BD663;}
+.g-switch-IOS::before{content: "";position: absolute;width: 1em;height: 1em;left: 0;border: 2px solid #d6d6d6;border-radius: 50%;background-color: #fff;z-index: 2;transition:.4s;-moz-transition:.4s;-webkit-transition:.4s;-o-transition:.4s;}
+.g-switch-IOS:checked::before{left: .7em;border-color: #4BD663;}
+/*righticon 右侧三角按钮*/
+.g-righticon{display: block;position: relative;min-width: 50px;height: 100%;padding-right: 30px;text-overflow: ellipsis; word-break: break-all;white-space: nowrap; overflow: hidden;}
+.g-righticon::after{content: "";position: absolute;width: 10px;height: 10px;border-right: 2px solid #e0e0e0;border-bottom: 2px solid #e0e0e0;top: 0;bottom: 0;right: 15px;margin: auto;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);transform: rotate(-45deg);}
