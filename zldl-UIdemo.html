@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>UIdemo</title>
+    <style>
+        /*0.5px细线*/
+        .g-lineTop{position: relative;min-height: 10px;}
+        .g-lineTop::before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 1px;background: #c8c8ca;-webkit-transform:scaleY(0.5);-moz-transform:scaleY(0.5);transform:scaleY(0.5);}
+        .g-lineBottom{position: relative;min-height: 10px;}
+        .g-lineBottom::after{content: "";display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 1px;background: #c8c8ca;-webkit-transform:scaleY(0.5);-moz-transform:scaleY(0.5);transform:scaleY(0.5);}
+        /*伸缩盒wrap*/
+        .a-itemwrap{background-color:#fff;display: -webkit-box;display: -moz-box;position:relative;margin: 0;padding:0 15px;box-sizing: border-box;}
+        /*模块title*/
+        .a-title{margin:0;box-sizing:border-box;width: 100%;min-height:10px;padding: 25px 15px 10px;font-size:12px;color: #858e99;}
+        /*说明文字*/
+        .a-explain{margin:0;box-sizing:border-box;width: 100%;min-height:10px;padding: 10px 15px 25px;font-size:12px;color: #858e99;}
+        /*自适应宽度子元素*/
+        .b-flex{display:block;width: 0;-moz-box-flex: 1.0; -o-box-flex:1.0; -webkit-box-flex:1.0; box-flex:1.0;}
+        /*各种button的包裹*/
+        .b-btnwrap{display: block;position: relative;min-width: 0;height: 45px;}
+        /*子元素title*/
+        .b-title{margin:0;padding:0 15px 0 0;font-size:16px;color:#222;width: 5em;height: 45px; line-height: 45px;}
+        /*righticon 右侧三角按钮*/
+        .b-righticon{display: block;position: relative;font-size:14px;color:#929292;padding:0 15px 0 10px;height: 45px; line-height: 45px;text-align:right;text-overflow: ellipsis; word-break: break-all;white-space: nowrap; overflow: hidden;}
+        .b-righticon::after{content: "";position: absolute;width: 10px;height: 10px;border-right: 2px solid #e0e0e0;border-bottom: 2px solid #e0e0e0;top: 0;bottom: 0;margin: auto;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);transform: rotate(-45deg);}
+        /*check按钮 与input checkbox配合*/
+        .b-check{font-size: 20px;margin:auto;padding:0;display: block;position:absolute;top:0;bottom:0;width: 1em;height: 1em;border: 1px solid #858e99;border-radius: 50%;box-sizing: border-box;outline: none;-webkit-appearance: none;}
+        .b-check:checked{background-color: #38adff;border: 1px solid #38adff;}
+        .b-check:checked::before{content:"";display: block;width: .5em;height: .3em;border-left: .1em solid #fff;border-bottom: .1em solid #fff;position: absolute;top: -.15em;bottom: 0;left: 0;right: 0;margin: auto;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);transform: rotate(-45deg);}
+        /*与check配合的label*/
+        .b-label{display: block;height: 45px;line-height: 45px;font-size: 16px;margin: 0;padding: 0 0 0 25px;}
+        /*删除按钮*/
+        .b-delete{font-size: 20px;position: relative;display: block;width: 1em;height:45px;margin: 0 10px 0 0;}
+        .b-delete::before{content: "";display: block;position:absolute;margin:auto;padding:0;top:0;bottom:0;width: 1em;height: 1em;border:1px solid #f00;border-radius: 50%;background:none;box-sizing: border-box;}
+        .b-delete::after{content: "";position: absolute;display: block;width: .5em;height: 2px;background-color: #f00;margin:auto;padding:0;top: 0;bottom: 0;left: 0;right: 0;}
+        /*仿IOS开关*/
+        .b-IOSswith{font-size: 25px;margin:auto;padding:0;display: block;position: absolute;top:0;bottom:0;right:15px;width: 1.7em;height: 1em;border-radius: .5em;background-color: #e6e6e6;vertical-align: text-bottom;transition:.4s;-moz-transition:.4s;-webkit-transition:.4s;-o-transition:.4s;box-sizing: border-box;border: none;outline: none;-webkit-appearance: none;}
+        .b-IOSswith:checked{background-color: #4BD663;}
+        .b-IOSswith::before{content: "";position: absolute;width: 1em;height: 1em;left: 0;border: 2px solid #d6d6d6;border-radius: 50%;background-color: #fff;z-index: 2;transition:.4s;-moz-transition:.4s;-webkit-transition:.4s;-o-transition:.4s;box-sizing: border-box;}
+        .b-IOSswith:checked::before{left: .7em;border-color: #4BD663;}
+        /*input样式*/
+        .c-input{margin:0;padding:0;width:100%;display:block;box-sizing:border-box;background:none;border:none;outline:none;font-size:16px;height:45px;line-height:25px;vertical-align: baseline;border-radius:0;-webkit-appearance: none;}
+        /*textarea样式*/
+        .c-textarea{margin:0;padding:10px 0;width:100%;display:block;box-sizing:border-box;height:94px;line-height:25px;background:none;border:none;outline:none;resize: none;font-size:16px;word-break:break-all;word-wrap: break-word;border-radius:0;-webkit-appearance: none;}
+        /*显示更多icon*/
+        .i-more{font-size: 12px;color:#929292;display: block;position: relative;margin: 0;padding:0 30px 0 0;box-sizing: border-box;height: 45px;line-height:45px;min-width: 25px;}
+        .i-more::before{content:"";display: block;position: absolute;margin: auto;padding: 0;top:0;bottom:0;right:0;box-sizing: border-box;width: 25px;height: 20px;border-radius:4px;background-color: #eee;}
+        .i-more::after{content:"";display: block;position: absolute;margin: auto;padding: 0;top:0;bottom:0;right:11px;box-sizing: border-box;width: 3px;height: 3px;border-radius: 50%;background-color: #999;box-shadow: 4px 0 0 #999, -4px 0 0 #999;}
+    </style>
+    <style>
+        ul{margin: 0;padding: 0;list-style-type: none;}
+        input{-webkit-appearance: none;}
+    </style>
+</head>
+<body style="margin: 10px 0;padding: 0;background-color: #f0eff4;-webkit-tap-highlight-color:rgba(0,0,0,0);">
+<ul>
+    <li>
+        <div class="a-itemwrap g-lineTop g-lineBottom">
+            <div class="b-title b-flex">icon更多</div>
+            <div class="i-more">more</div>
+        </div>
+    </li>
+    <li>
+        <div class="a-title">带标题表单</div>
+        <div class="a-itemwrap g-lineTop g-lineBottom">
+            <div class="b-title">输入框标题</div>
+            <div class="b-flex">
+                <input class="c-input" type="text" placeholder="我是输入框，请输入内容"/>
+            </div>
+            <div class="b-righticon"></div>
+        </div>
+        <div class="a-title">点右侧选择</div>
+        <div class="a-itemwrap g-lineTop g-lineBottom">
+            <div class="b-title">点右侧选择</div>
+            <div class="b-righticon b-flex">点我选择</div>
+        </div>
+        <div class="a-explain">标题默认5字符宽，input自适应宽度，右侧按钮内可输入显示文字</div>
+    </li>
+    <li>
+        <div class="a-title">文本框外置标题</div>
+        <div class="a-itemwrap g-lineTop g-lineBottom">
+            <textarea class="c-textarea" placeholder="我是文本框，请输入内容"></textarea>
+        </div>
+        <div class="a-explain">文本框推荐使用外置标题</div>
+    </li>
+    <li>
+        <div class="a-itemwrap g-lineTop g-lineBottom">
+            <div class="b-title b-flex">仿IOS开关</div>
+            <input class="b-IOSswith" type="checkbox"/>
+        </div>
+        <div class="a-explain">用作switch类的开关</div>
+    </li>
+    <li>
+        <div class="a-title">多选框</div>
+        <div class="a-itemwrap">
+            <input class="b-check" name="checkbox" type="checkbox" id="checkbox1" />
+            <label class="b-label b-flex" for="checkbox1" data-macip="">checkbox1</label>
+        </div>
+        <div class="a-itemwrap">
+            <input class="b-check" name="checkbox" type="checkbox" id="checkbox2" />
+            <label class="b-label b-flex" for="checkbox2" data-macip="">checkbox2</label>
+        </div>
+        <div class="a-itemwrap">
+            <input class="b-check" name="checkbox" type="checkbox" id="checkbox3" />
+            <label class="b-label b-flex" for="checkbox3" data-macip="">checkbox3</label>
+        </div>
+    </li>
+    <li>
+        <div class="a-title">单选框</div>
+        <div class="a-itemwrap">
+            <input class="b-check" name="radio" type="radio" id="radio1" />
+            <label class="b-label b-flex" for="radio1" data-macip="">radio1</label>
+        </div>
+        <div class="a-itemwrap">
+            <input class="b-check" name="radio" type="radio" id="radio2" />
+            <label class="b-label b-flex" for="radio2" data-macip="">radio2</label>
+        </div>
+        <div class="a-itemwrap">
+            <input class="b-check" name="radio" type="radio" id="radio3" />
+            <label class="b-label b-flex" for="radio3" data-macip="">radio3</label>
+        </div>
+    </li>
+    <li>
+        <div class="a-title">新增选项</div>
+        <div class="a-itemwrap">
+            <div class="b-delete"></div>
+            <div class="b-flex">
+                <input class="c-input" type="text" placeholder="我是输入框，请输入内容"/>
+            </div>
+            <div class="b-righticon"></div>
+        </div>
+    </li>
+</ul>
+</body>
+</html>
